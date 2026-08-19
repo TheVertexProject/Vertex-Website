@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Download, Lock, ShieldCheck, Sparkles, Terminal, CheckCircle2, ChevronRight, HardDrive, CloudLightning, Cpu } from 'lucide-react';
 import { calculateCreatorAge } from '../utils/calcAge';
+import vertexLogo from '../assets/icon.png';
 
 interface HeroProps {
   onOpenDownloadModal: () => void;
@@ -210,7 +211,10 @@ export const Hero: React.FC<HeroProps> = ({
                   <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-2xl p-1 bg-gradient-to-tr from-cyan-500/40 via-fuchsia-500/30 to-amber-500/40 shadow-2xl shadow-cyan-500/20 group">
                     <div className="w-full h-full rounded-xl bg-slate-950 overflow-hidden relative flex items-center justify-center">
                       <img
-                        src="/assets/icon.png"
+                        src={vertexLogo}
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = '/icon.png';
+                        }}
                         alt="Vertex OS Logo"
                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"

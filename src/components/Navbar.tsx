@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { RoutePath } from '../types';
 import { Download, Shield, ExternalLink, Menu, X, Sparkles, Terminal, Code2, Cloud } from 'lucide-react';
+import vertexLogo from '../assets/icon.png';
 
 interface NavbarProps {
   currentRoute: RoutePath;
@@ -63,7 +64,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <div className="relative w-10 h-10 rounded-xl bg-slate-900/80 border border-white/15 p-1 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 group-hover:border-cyan-400/50 shadow-lg shadow-cyan-500/10">
               <img
-                src="/assets/icon.png"
+                src={vertexLogo}
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/icon.png';
+                }}
                 alt="Vertex OS Logo"
                 className="w-full h-full object-cover rounded-lg"
                 referrerPolicy="no-referrer"

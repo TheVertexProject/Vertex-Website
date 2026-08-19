@@ -1,6 +1,7 @@
 import React from 'react';
 import { RoutePath } from '../types';
 import { calculateCreatorAge } from '../utils/calcAge';
+import vertexLogo from '../assets/icon.png';
 import { 
   ShieldCheck, 
   ExternalLink, 
@@ -60,7 +61,10 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-slate-900 border border-white/15 p-1 flex items-center justify-center overflow-hidden">
                 <img
-                  src="/assets/icon.png"
+                  src={vertexLogo}
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = '/icon.png';
+                  }}
                   alt="Vertex OS Logo"
                   className="w-full h-full object-cover rounded-lg"
                   referrerPolicy="no-referrer"
