@@ -54,16 +54,16 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* Main Headline & Semantic Header */}
             <header className="space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300 font-mono text-xs">
+                <span>OAuth Application Name:</span>
+                <span className="text-cyan-300 font-bold">Vertex OS</span>
+              </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
                 Vertex OS
               </h1>
-              <p className="tagline text-2xl sm:text-3xl lg:text-4xl font-bold text-gradient-vibrant tracking-tight">
-                Next-Generation Linux Operating System
-              </p>
               <p className="text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-2xl pt-1">
-                Engineered for <span className="text-cyan-300 font-medium">seamless hardware deployment</span>, 
-                automated GPT partitioning, and <span className="text-fuchsia-300 font-medium">hybrid R3 bucket cloud sync</span> authenticated via 
-                Google Auth — all with strictly local security and zero remote telemetry.
+                An independent Linux operating system engineered for <span className="text-cyan-300 font-medium">bare-metal hardware deployment</span>, 
+                automated GPT partitioning, and seamless <span className="text-blue-300 font-medium">Google Drive cloud sync</span> via the Vertex Cloud Sync subsystem — with strictly local security and zero remote telemetry.
               </p>
             </header>
 
@@ -74,8 +74,8 @@ export const Hero: React.FC<HeroProps> = ({
                 <span className="text-xs font-medium text-slate-200">Auto GPT & NVMe</span>
               </div>
               <div className="p-3 rounded-xl bg-slate-900/60 border border-white/10 flex items-center gap-2.5">
-                <CloudLightning className="w-4 h-4 text-fuchsia-400 shrink-0" />
-                <span className="text-xs font-medium text-slate-200">R3 Bucket VFS Sync</span>
+                <CloudLightning className="w-4 h-4 text-blue-400 shrink-0" />
+                <span className="text-xs font-medium text-slate-200">Google Drive VFS Sync</span>
               </div>
               <div className="p-3 rounded-xl bg-slate-900/60 border border-white/10 flex items-center gap-2.5 col-span-2 sm:col-span-1">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />

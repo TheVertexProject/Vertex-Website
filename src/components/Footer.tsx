@@ -72,12 +72,11 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div>
                 <span className="font-bold text-lg text-white tracking-tight">Vertex OS</span>
-                <p className="text-[11px] font-mono text-cyan-400">Next-Gen Linux OS</p>
               </div>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Next-generation Linux operating system designed for seamless hardware deployment and hybrid cloud integration.
+              An independent Linux operating system designed for seamless hardware deployment and hybrid cloud integration.
             </p>
 
             <div className="p-3 rounded-xl bg-slate-900/80 border border-white/5 text-xs text-slate-300 space-y-1">
@@ -237,8 +236,8 @@ export const Footer: React.FC<FooterProps> = ({
 
         </div>
 
-        {/* Google API Limited Use Policy Disclosure Banner */}
-        <div className="mt-8 p-4 rounded-2xl bg-slate-900/60 border border-white/5 text-[11px] text-slate-400 leading-relaxed">
+        {/* Google API Limited Use Policy Disclosure Banner & Trademark Disclaimer */}
+        <div className="mt-8 p-4 rounded-2xl bg-slate-900/60 border border-white/5 text-[11px] text-slate-400 leading-relaxed space-y-2">
           <p>
             <strong>Google API Services User Data Policy Compliance:</strong> Vertex OS's use and transfer to any other app of information received from Google APIs will adhere to the{' '}
             <a
@@ -250,6 +249,9 @@ export const Footer: React.FC<FooterProps> = ({
               Google API Services User Data Policy
             </a>
             , including the Limited Use requirements. Credentials remain 100% local at <code className="text-slate-300 font-mono">~/.config/rclone/rclone.conf</code> with zero remote telemetry.
+          </p>
+          <p className="text-[10px] text-slate-500">
+            <strong>Google Trademark Disclaimer:</strong> Google, Google Drive, and the Google logo are trademarks of Google LLC. Vertex OS is an independent operating system developed by The Vertex Project and is not affiliated with, endorsed by, or sponsored by Google LLC.
           </p>
         </div>
 

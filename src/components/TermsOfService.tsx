@@ -63,10 +63,10 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) =>
 
             <div className="text-xs text-rose-100/90 leading-relaxed space-y-3 pt-1">
               <p className="font-semibold text-rose-200">
-                PLEASE READ CAREFULLY BEFORE ACTIVATING OR USING THE VERTEX CLOUD SYNC ENGINE, R3 BUCKET CACHE, OR GOOGLE AUTH INTEGRATION:
+                PLEASE READ CAREFULLY BEFORE ACTIVATING OR USING THE VERTEX CLOUD SYNC ENGINE OR GOOGLE DRIVE INTEGRATION:
               </p>
               <p>
-                File synchronization and fetching between local storage systems and remote cloud repositories (including R3 object storage buckets authenticated via Google Auth) carry inherent risks, including but not limited to: 
+                File synchronization and fetching between local storage systems and remote cloud repositories (including Google Drive mounted via the Vertex Cloud Sync subsystem) carry inherent risks, including but not limited to: 
                 <strong> conflicting simultaneous edits, asynchronous cache invalidation, network interruption timeouts, file truncation during background chunking, race conditions across multiple client devices, or unintentional deletion propagation</strong>.
               </p>
               <p>
@@ -127,13 +127,13 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) =>
             </ul>
           </section>
 
-          {/* 3. Third-Party Services (Google Auth & Cloud Storage) */}
+          {/* 3. Third-Party Services (Google Auth & Google Drive Cloud Storage) */}
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">
-              3. Google Auth & Cloud Storage Third-Party Terms
+              3. Google Auth & Google Drive Third-Party Terms
             </h2>
             <p>
-              Use of Google Auth is subject to Google's own Terms of Service and API Policies. Vertex OS operates as a sovereign local client accessing authorization tokens stored strictly on your local disk to facilitate drive content access via high-performance R3 bucket storage. You are responsible for maintaining your account credentials and complying with third-party service terms.
+              Use of Google Auth and Google Drive API integration is subject to Google's Terms of Service and the Google API Services User Data Policy. Vertex OS operates as a sovereign local client accessing authorization tokens stored strictly on your local disk to mount your Google Drive files to <code className="text-cyan-300 font-mono">~/Vertex Cloud</code>. You are responsible for maintaining your account credentials and complying with third-party service terms.
             </p>
           </section>
 

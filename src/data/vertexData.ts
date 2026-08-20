@@ -52,25 +52,25 @@ export const PROPRIETARY_TOOLS: SoftwareTool[] = [
   {
     id: 'vertex-cloud-sync',
     name: 'Vertex Cloud Sync Engine',
-    tagline: 'Background integration daemon interfacing with high-performance R3 bucket storage via Google Auth',
+    tagline: 'Kernel-level VFS background daemon for seamless Google Drive cloud integration',
     category: 'Proprietary System Suite',
     iconName: 'CloudLightning',
     badge: 'Proprietary Core',
-    color: 'magenta',
-    summary: 'A kernel-level Virtual File System (VFS) cache layer and asynchronous sync daemon that fetches and streams drive content from an optimized R3 bucket, secured via Google Auth.',
+    color: 'blue',
+    summary: 'A kernel-level Virtual File System (VFS) cache layer and asynchronous sync daemon powered by rclone that mounts and syncs your Google Drive directly into native Linux directories.',
     keyFeatures: [
       'Kernel FUSE / VFS caching for instant on-demand file streaming without downloading full folders',
-      'High-throughput R3 object bucket synchronization authenticated securely via Google Auth / OAuth 2.0',
+      'Direct Google Drive API integration authenticated securely via official Google OAuth 2.0 PKCE',
       'Local-only credential vault strictly saved in standard user configuration (~/.config/rclone/rclone.conf)',
       'Intelligent chunked background upload queue with SHA-256 integrity verification'
     ],
     technicalSpecs: [
-      { label: 'Cloud Storage Protocol', value: 'High-Performance R3 Object Storage Bucket' },
-      { label: 'Authentication Provider', value: 'Google Auth (OAuth 2.0 PKCE User Authorization)' },
-      { label: 'Storage Mount', value: 'Native systemd mount unit target at ~/VertexDrive' },
+      { label: 'Cloud Storage Protocol', value: 'Google Drive API (OAuth 2.0 PKCE)' },
+      { label: 'Authentication Provider', value: 'Google Identity / Google OAuth' },
+      { label: 'Storage Mount', value: 'Native systemd mount unit target at ~/Vertex Cloud' },
       { label: 'Token Isolation', value: '100% On-Device Auth Token Storage (Zero Telemetry)' }
     ],
-    architectureNote: 'Bypasses slow web apps by mounting cloud files as native POSIX paths, fetching content from high-speed R3 bucket storage with Google Auth verification for zero-latency local workflows.',
+    architectureNote: 'Bypasses slow web apps by mounting cloud files as native POSIX paths (~/Vertex Cloud), communicating directly with Google API endpoints for zero-latency local workflows.',
     deploymentModel: 'Native systemd user service daemon mounted dynamically upon desktop session login.'
   },
   {

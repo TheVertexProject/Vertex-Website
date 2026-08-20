@@ -83,9 +83,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                   v0.3 Alpha
                 </span>
               </div>
-              <p className="text-[11px] text-slate-400 font-mono tracking-tight hidden sm:block">
-                Next-Gen Linux OS
-              </p>
             </div>
           </button>
 
