@@ -18,7 +18,147 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body class="bg-[#0a0d14] text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200 min-h-screen">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static fallback & crawler-accessible content for Vertex OS and Google OAuth verification -->
+      <header style="padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); max-width: 1200px; margin: 0 auto;">
+        <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h1 style="font-size: 28px; font-weight: 800; margin: 0; color: #ffffff; letter-spacing: -0.5px;">Vertex OS</h1>
+            <p style="font-size: 13px; color: #38bdf8; margin: 4px 0 0 0; font-family: monospace;">Independent Linux-Based Operating System</p>
+          </div>
+          <div style="display: flex; gap: 16px; font-size: 14px;">
+            <a href="#about" style="color: #94a3b8; text-decoration: none;">About</a>
+            <a href="#google-drive-integration" style="color: #38bdf8; text-decoration: none;">Google Drive Integration</a>
+            <a href="#privacy-policy" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a>
+            <a href="#terms-of-service" style="color: #94a3b8; text-decoration: none;">Terms of Service</a>
+          </div>
+        </nav>
+      </header>
+
+      <main style="max-w: 1200px; max-width: 1000px; margin: 0 auto; padding: 40px 20px; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6;">
+        <!-- Hero & Overview -->
+        <section id="hero" style="margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <div style="display: inline-block; padding: 4px 12px; background: rgba(14, 165, 233, 0.15); border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 9999px; font-size: 12px; color: #38bdf8; font-weight: 600; text-transform: uppercase; margin-bottom: 16px;">
+            OAuth Application: Vertex OS
+          </div>
+          <h2 style="font-size: 36px; font-weight: 800; color: #ffffff; margin: 0 0 16px 0; letter-spacing: -0.5px;">Vertex OS</h2>
+          <p style="font-size: 18px; color: #cbd5e1; max-width: 800px; margin: 0 0 24px 0;">
+            Vertex OS is an independent Linux-based operating system designed for bare-metal hardware deployment, automated GPT partitioning, and seamless cloud synchronization.
+          </p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" style="margin-bottom: 48px; padding: 32px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;">
+          <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin-top: 0;">About Vertex OS</h2>
+          <p style="color: #cbd5e1; font-size: 15px; margin-bottom: 16px;">
+            <strong>Vertex OS</strong> is an independent Linux-based operating system built for developers, system administrators, and everyday users who demand sovereignty over their personal computing. Vertex OS provides a complete desktop environment with an automated hardware deployment installer, Btrfs filesystem architecture, and native local productivity tools.
+          </p>
+          <p style="color: #cbd5e1; font-size: 15px; margin-bottom: 0;">
+            The operating system includes the <strong>Vertex OS Installer</strong> and the <strong>Vertex Cloud Sync</strong> background subsystem, which allow users to optionally connect their personal Google Drive storage directly into the local Linux virtual filesystem.
+          </p>
+        </section>
+
+        <!-- Google Drive & API Integration Section -->
+        <section id="google-drive-integration" style="margin-bottom: 48px; padding: 32px; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 16px;">
+          <div style="display: inline-block; padding: 4px 12px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 9999px; font-size: 12px; color: #38bdf8; font-weight: 600; text-transform: uppercase; margin-bottom: 12px;">
+            Google OAuth 2.0 Integration
+          </div>
+          <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin-top: 0;">Google API & Google Drive Integration Purpose</h2>
+          <p style="color: #cbd5e1; font-size: 15px; margin-bottom: 16px;">
+            Vertex OS utilizes Google OAuth 2.0 to provide optional, sovereign cloud storage synchronization for users who choose to connect their Google Drive account.
+          </p>
+          <h3 style="font-size: 16px; font-weight: 600; color: #38bdf8; margin: 20px 0 8px 0;">1. Purpose of Access & Scopes Requested</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 12px;">
+            Vertex OS requests the Google Drive API scope (<code style="background: #0f172a; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 13px;">https://www.googleapis.com/auth/drive</code> or <code style="background: #0f172a; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 13px;">https://www.googleapis.com/auth/drive.file</code>) and basic account identity (<code style="background: #0f172a; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 13px;">userinfo.email</code>) solely to:
+          </p>
+          <ul style="color: #cbd5e1; font-size: 14px; margin-bottom: 16px; padding-left: 24px;">
+            <li>Mount the user's remote Google Drive cloud storage to a local virtual directory path at <code style="background: #0f172a; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 13px;">~/Vertex Cloud</code> on their computer.</li>
+            <li>Enable the user to browse, open, edit, and back up personal files directly through standard Linux file managers (such as Nautilus or Dolphin).</li>
+            <li>Facilitate asynchronous local file synchronization powered by the open-source <code style="background: #0f172a; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 13px;">rclone</code> VFS engine.</li>
+          </ul>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #38bdf8; margin: 20px 0 8px 0;">2. Local-Only Token Storage & Zero Telemetry</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 16px;">
+            All OAuth tokens and configuration keys are stored <strong>strictly and exclusively on the user's local disk</strong> at <code style="background: #0f172a; color: #fbbf24; padding: 2px 6px; border-radius: 4px; font-size: 13px;">~/.config/rclone/rclone.conf</code> with POSIX 0600 (owner read/write only) permissions. Vertex OS transmits zero tokens, zero telemetry, and zero user data to any remote server operated by The Vertex Project or third parties.
+          </p>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #38bdf8; margin: 20px 0 8px 0;">3. Google API Services User Data Policy Compliance</h3>
+          <div style="background: rgba(14, 165, 233, 0.1); border-left: 4px solid #38bdf8; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+            <p style="color: #e2e8f0; font-size: 13px; margin: 0; line-height: 1.5;">
+              <strong>Limited Use Disclosure:</strong> Vertex OS's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-weight: 600; text-decoration: underline;">Google API Services User Data Policy</a>, including the Limited Use requirements.
+            </p>
+          </div>
+
+          <p style="color: #94a3b8; font-size: 12px; margin: 0;">
+            <em>Google Trademark Disclaimer: Google, Google Drive, and the Google logo are trademarks of Google LLC. Vertex OS is an independent operating system developed by The Vertex Project and is not affiliated with, sponsored by, or endorsed by Google LLC.</em>
+          </p>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy-policy" style="margin-bottom: 48px; padding: 32px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;">
+          <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin-top: 0;">Vertex OS Privacy Policy</h2>
+          <p style="font-size: 13px; color: #94a3b8; margin-bottom: 20px; font-family: monospace;">Effective Date: August 20, 2026 • Published by The Vertex Project</p>
+          
+          <h3 style="font-size: 16px; font-weight: 600; color: #ffffff; margin: 16px 0 8px 0;">1. Executive Privacy Principle</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 12px;">
+            The Vertex Project ("Vertex OS", "we", "us", or "our") is built on the principle of complete user sovereignty. Vertex OS does not collect telemetry, does not log user activity, does not maintain remote user databases, and does not sell or share any user information.
+          </p>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #ffffff; margin: 16px 0 8px 0;">2. Local Credential Storage for Google Drive</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 12px;">
+            When you connect your Google Drive account, your OAuth 2.0 access and refresh tokens are stored exclusively on your physical machine at <code style="background: #0f172a; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 13px;">~/.config/rclone/rclone.conf</code>. No credentials or files are ever sent to or processed by external Vertex servers.
+          </p>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #ffffff; margin: 16px 0 8px 0;">3. Zero Telemetry & Diagnostics</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 12px;">
+            Vertex OS does not transmit crash telemetry, hardware identifiers, MAC addresses, or IP logs. All system processes operate offline-first.
+          </p>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #ffffff; margin: 16px 0 8px 0;">4. User Control and Token Revocation</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 12px;">
+            You may revoke Vertex OS access to your Google account at any time either by deleting <code style="background: #0f172a; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 13px;">~/.config/rclone/rclone.conf</code> locally, or by managing authorized third-party apps in your Google Account Security Dashboard.
+          </p>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #ffffff; margin: 16px 0 8px 0;">5. Contact Information</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 0;">
+            For privacy inquiries, contact: <a href="mailto:the.vertex.project.main@gmail.com" style="color: #38bdf8;">the.vertex.project.main@gmail.com</a>
+          </p>
+        </section>
+
+        <!-- Terms of Service Section -->
+        <section id="terms-of-service" style="margin-bottom: 48px; padding: 32px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;">
+          <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin-top: 0;">Vertex OS Terms of Service</h2>
+          <p style="font-size: 13px; color: #94a3b8; margin-bottom: 20px; font-family: monospace;">Effective Date: August 20, 2026 • Published by The Vertex Project</p>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #ffffff; margin: 16px 0 8px 0;">1. Acceptance & Pre-Release Status</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 12px;">
+            By using Vertex OS or any related software utilities, you agree to these Terms. Vertex OS is provided as an open, independent operating system distribution for personal and professional computing.
+          </p>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #ffffff; margin: 16px 0 8px 0;">2. Third-Party Services (Google Auth & Google Drive)</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 12px;">
+            Use of Google Drive synchronization is subject to Google's Terms of Service and API Policies. Vertex OS acts solely as a client-side interface communicating directly with Google API endpoints over encrypted HTTPS.
+          </p>
+
+          <h3 style="font-size: 16px; font-weight: 600; color: #ffffff; margin: 16px 0 8px 0;">3. Warranty Disclaimer</h3>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 0;">
+            Vertex OS and all associated tools are provided "AS IS" and "AS AVAILABLE" without warranty of any kind, express or implied.
+          </p>
+        </section>
+      </main>
+
+      <footer style="padding: 32px 24px; border-top: 1px solid rgba(255,255,255,0.1); max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #94a3b8;">
+        <div>
+          &copy; 2026 The Vertex Project. All rights reserved. • <strong>Vertex OS</strong>
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#about" style="color: #cbd5e1; text-decoration: none;">About Vertex OS</a>
+          <a href="#google-drive-integration" style="color: #38bdf8; text-decoration: none;">Google Drive Integration</a>
+          <a href="#privacy-policy" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a>
+          <a href="#terms-of-service" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a>
+        </div>
+      </footer>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
