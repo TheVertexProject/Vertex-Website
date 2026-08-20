@@ -288,7 +288,7 @@ export const CloudTransparency: React.FC<CloudTransparencyProps> = ({ onNavigate
 
           {/* Quick Legal links */}
           <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
-            <span>Official Domain: <strong className="text-slate-200 font-mono">vertex.jo3.org</strong></span>
+            <span>Project: <strong className="text-slate-200 font-mono">The Vertex Project</strong></span>
             <div className="flex items-center gap-4">
               <button
                 onClick={() => {

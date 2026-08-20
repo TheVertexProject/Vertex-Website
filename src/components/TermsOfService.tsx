@@ -38,7 +38,7 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) =>
             Terms of Service
           </h1>
           <p className="text-slate-400 text-sm font-mono">
-            Effective Date: August 19, 2026 • Published by The Vertex Project • <span className="text-cyan-300">https://vertex.jo3.org</span>
+            Effective Date: August 19, 2026 • Published by The Vertex Project
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) =>
               1. Acceptance of Terms & Pre-Release / Alpha Status
             </h2>
             <p>
-              By accessing the website at <a href="https://vertex.jo3.org" className="text-cyan-300 underline">https://vertex.jo3.org</a>, or by downloading, compiling, installing, or executing Vertex OS or any related proprietary utilities, you agree to be bound by these Terms of Service.
+              By accessing this website, or by downloading, compiling, installing, or executing Vertex OS or any related proprietary utilities, you agree to be bound by these Terms of Service.
             </p>
             <p>
               Vertex OS is currently <strong>IN ACTIVE DEVELOPMENT (Alpha Version)</strong>. Pre-release builds may contain bugs, unfinished subsystems, performance bottlenecks, or stability issues. You acknowledge that pre-release software is intended for evaluation and developer testing and should not be used in critical production environments without understanding the risks.
@@ -143,7 +143,7 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) =>
               4. "AS-IS" Warranty Disclaimer
             </h2>
             <div className="p-4 rounded-xl bg-slate-950 border border-white/10 font-mono text-xs text-slate-300 leading-relaxed uppercase">
-              VERTEX OS, ITS PROPRIETARY SUITE, THE WEBSITE (HTTPS://VERTEX.JO3.ORG), AND ALL ASSOCIATED SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+              VERTEX OS, ITS PROPRIETARY SUITE, THIS WEBSITE, AND ALL ASSOCIATED SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
             </div>
           </section>
 
@@ -166,7 +166,6 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) =>
             <div className="p-4 rounded-xl bg-slate-900/80 border border-white/10 space-y-1 text-xs font-mono">
               <div>Project: <strong className="text-white">The Vertex Project (Vertex OS)</strong></div>
               <div>Contact Email: <a href="mailto:the.vertex.project.main@gmail.com" className="text-cyan-300 underline">the.vertex.project.main@gmail.com</a></div>
-              <div>Official Portal: <a href="https://vertex.jo3.org" className="text-cyan-300 underline">https://vertex.jo3.org</a></div>
             </div>
           </section>
 

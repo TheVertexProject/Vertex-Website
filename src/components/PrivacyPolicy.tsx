@@ -38,7 +38,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
             Privacy Policy
           </h1>
           <p className="text-slate-400 text-sm font-mono">
-            Effective Date & Last Updated: August 19, 2026 • Official Domain: <span className="text-cyan-300">https://vertex.jo3.org</span>
+            Effective Date & Last Updated: August 19, 2026 • Published by The Vertex Project
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
               Executive Privacy Commitment
             </h2>
             <p className="text-xs text-slate-300 leading-relaxed">
-              <strong>The Vertex Project</strong> ("Vertex OS", "we", "us", or "our"), operating at <a href="https://vertex.jo3.org" className="text-cyan-300 underline">https://vertex.jo3.org</a>, 
+              <strong>The Vertex Project</strong> ("Vertex OS", "we", "us", or "our"), 
               is built around a fundamental engineering principle: <strong>your personal computer belongs entirely to you.</strong> 
               Vertex OS does not collect telemetry, does not log your browsing or system usage, does not maintain remote user databases, and does not sell or share any user information.
             </p>
@@ -86,7 +86,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
             <ul className="list-disc pl-5 space-y-2 text-slate-300">
               <li><strong>No OS Diagnostics or Pingbacks:</strong> Vertex OS does not send background heartbeats, crash dumps, or usage analytics back to our developers or any third-party infrastructure.</li>
               <li><strong>No Hardware Tracking:</strong> We do not track unique hardware identifiers, MAC addresses, IP addresses, or serial numbers.</li>
-              <li><strong>Website Analytics:</strong> The website <code className="text-cyan-300">https://vertex.jo3.org</code> does not use invasive tracking cookies, third-party advertising pixels, or behavioral profiling scripts.</li>
+              <li><strong>Website Analytics:</strong> The project website does not use invasive tracking cookies, third-party advertising pixels, or behavioral profiling scripts.</li>
             </ul>
           </section>
 
@@ -182,7 +182,6 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
             <div className="p-4 rounded-xl bg-slate-900/80 border border-white/10 space-y-1 text-xs font-mono">
               <div>Project: <strong className="text-white">The Vertex Project (Vertex OS)</strong></div>
               <div>Maintainer Email: <a href="mailto:the.vertex.project.main@gmail.com" className="text-cyan-300 underline">the.vertex.project.main@gmail.com</a></div>
-              <div>Official URL: <a href="https://vertex.jo3.org" className="text-cyan-300 underline">https://vertex.jo3.org</a></div>
             </div>
           </section>
 

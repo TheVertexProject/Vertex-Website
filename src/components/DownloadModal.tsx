@@ -184,7 +184,7 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose })
         {/* Modal Footer */}
         <div className="p-4 sm:p-6 bg-slate-950/80 border-t border-white/10 flex items-center justify-between">
           <span className="text-[11px] text-slate-400 font-mono">
-            Host: <strong className="text-slate-300">vertex.jo3.org</strong>
+            Platform: <strong className="text-slate-300">Vertex OS</strong>
           </span>
           <button
             onClick={onClose}

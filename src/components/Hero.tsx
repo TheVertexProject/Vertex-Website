@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
                 Vertex OS
               </h1>
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gradient-vibrant tracking-tight">
+              <p className="tagline text-2xl sm:text-3xl lg:text-4xl font-bold text-gradient-vibrant tracking-tight">
                 Next-Generation Linux Operating System
               </p>
               <p className="text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-2xl pt-1">

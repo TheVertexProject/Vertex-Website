@@ -83,10 +83,7 @@ export const CreatorSection: React.FC = () => {
               {/* Direct Project Contact */}
               <div className="pt-3 border-t border-white/10 flex flex-wrap items-center gap-4 text-xs text-slate-400">
                 <span className="flex items-center gap-1.5 text-slate-300 font-mono">
-                  <Globe className="w-4 h-4 text-cyan-400" /> vertex.jo3.org
-                </span>
-                <span className="flex items-center gap-1.5 text-slate-300 font-mono">
-                  <Mail className="w-4 h-4 text-fuchsia-400" /> the.vertex.project.main@gmail.com
+                  <Mail className="w-4 h-4 text-cyan-400" /> the.vertex.project.main@gmail.com
                 </span>
               </div>
 

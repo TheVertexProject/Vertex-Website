@@ -72,7 +72,7 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div>
                 <span className="font-bold text-lg text-white tracking-tight">Vertex OS</span>
-                <p className="text-[11px] font-mono text-cyan-400">vertex.jo3.org</p>
+                <p className="text-[11px] font-mono text-cyan-400">Next-Gen Linux OS</p>
               </div>
             </div>
 
@@ -253,11 +253,38 @@ export const Footer: React.FC<FooterProps> = ({
           </p>
         </div>
 
-        {/* Bottom Bar: Copyright & Contact */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
-          <div>
-            © 2026 The Vertex Project. All rights reserved. • Hosted at <a href="https://vertex.jo3.org" className="text-cyan-400 hover:underline">https://vertex.jo3.org</a>
+        {/* Mandatory Visible OAuth Links & Copyright */}
+        <div className="mt-8 pt-6 border-t border-white/10 text-center space-y-3">
+          <div className="text-sm font-medium">
+            <a
+              href="#privacy-policy"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick('/privacy-policy');
+              }}
+              className="text-cyan-400 hover:text-cyan-300 transition-colors mx-2.5 underline"
+            >
+              Privacy Policy
+            </a>
+            <span className="text-slate-600">|</span>
+            <a
+              href="#terms-of-service"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick('/terms-of-service');
+              }}
+              className="text-cyan-400 hover:text-cyan-300 transition-colors mx-2.5 underline"
+            >
+              Terms of Service
+            </a>
           </div>
+          <p className="text-xs text-slate-400">
+            &copy; 2026 Vertex OS Project. All rights reserved.
+          </p>
+        </div>
+
+        {/* Bottom Bar: Maintainer Contact */}
+        <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500 font-mono">
           <div className="flex items-center gap-4">
             <a
               href="mailto:the.vertex.project.main@gmail.com"

@@ -1,6 +1,6 @@
 {
   "name": "Vertex OS",
-  "description": "Next-generation Ubuntu-based Linux operating system designed for seamless hardware deployment and hybrid cloud integration.",
+  "description": "Vertex OS is an independent Linux-based operating system designed for bare-metal hardware deployment and seamless hybrid cloud integration.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
