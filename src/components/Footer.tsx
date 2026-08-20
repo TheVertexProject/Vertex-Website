@@ -63,10 +63,10 @@ export const Footer: React.FC<FooterProps> = ({
                 <img
                   src={vertexLogo}
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = '/icon.png';
+                    (e.currentTarget as HTMLImageElement).src = 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Vertex_OS.png';
                   }}
                   alt="Vertex OS Logo"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-contain rounded-lg"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -147,6 +147,14 @@ export const Footer: React.FC<FooterProps> = ({
               Architecture & Cloud
             </h4>
             <ul className="space-y-2 text-slate-400">
+              <li>
+                <button
+                  onClick={() => handleLinkClick('/', 'about')}
+                  className="hover:text-fuchsia-300 transition-colors text-left text-cyan-400 font-medium"
+                >
+                  About Vertex OS & Cloud Integration
+                </button>
+              </li>
               <li>
                 <button
                   onClick={() => handleLinkClick('/', 'cloud-transparency')}

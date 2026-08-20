@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { RoutePath } from './types';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { AboutSection } from './components/AboutSection';
 import { SoftwareSuite } from './components/SoftwareSuite';
 import { CloudTransparency } from './components/CloudTransparency';
 import { CreatorSection } from './components/CreatorSection';
@@ -88,6 +89,9 @@ export default function App() {
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
             />
+
+            {/* App Purpose Section: About Vertex OS & Cloud Integration */}
+            <AboutSection onNavigate={navigateTo} />
 
             {/* Proprietary Software Suite Section */}
             <SoftwareSuite

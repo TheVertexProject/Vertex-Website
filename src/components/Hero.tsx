@@ -52,20 +52,20 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
             </div>
 
-            {/* Main Headline */}
-            <div className="space-y-3">
+            {/* Main Headline & Semantic Header */}
+            <header className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-                Next-Generation{' '}
-                <span className="text-gradient-vibrant inline-block">
-                  Linux Operating System
-                </span>
+                Vertex OS
               </h1>
-              <p className="text-lg sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl">
+              <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gradient-vibrant tracking-tight">
+                Next-Generation Linux Operating System
+              </p>
+              <p className="text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-2xl pt-1">
                 Engineered for <span className="text-cyan-300 font-medium">seamless hardware deployment</span>, 
                 automated GPT partitioning, and <span className="text-fuchsia-300 font-medium">hybrid R3 bucket cloud sync</span> authenticated via 
                 Google Auth — all with strictly local security and zero remote telemetry.
               </p>
-            </div>
+            </header>
 
             {/* Quick Feature Chips */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
@@ -213,10 +213,10 @@ export const Hero: React.FC<HeroProps> = ({
                       <img
                         src={vertexLogo}
                         onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = '/icon.png';
+                          (e.currentTarget as HTMLImageElement).src = 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Vertex_OS.png';
                         }}
                         alt="Vertex OS Logo"
-                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-contain p-2 transform group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />

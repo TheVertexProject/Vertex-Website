@@ -66,10 +66,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               <img
                 src={vertexLogo}
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/icon.png';
+                  (e.currentTarget as HTMLImageElement).src = 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Vertex_OS.png';
                 }}
                 alt="Vertex OS Logo"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-contain rounded-lg"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-transparent pointer-events-none" />
@@ -103,11 +103,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               Overview
             </button>
             <button
+              id="nav-link-about"
+              onClick={() => handleNavClick('/', 'about')}
+              className="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1.5"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              About & Purpose
+            </button>
+            <button
               id="nav-link-suite"
               onClick={() => handleNavClick('/', 'software-suite')}
               className="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1.5"
             >
-              <Code2 className="w-3.5 h-3.5 text-cyan-400" />
+              <Code2 className="w-3.5 h-3.5 text-blue-400" />
               Software Suite
             </button>
             <button
@@ -115,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('/', 'cloud-transparency')}
               className="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1.5"
             >
-              <Cloud className="w-3.5 h-3.5 text-magenta-400 text-fuchsia-400" />
+              <Cloud className="w-3.5 h-3.5 text-fuchsia-400" />
               Cloud Architecture
             </button>
             <button
@@ -124,38 +132,32 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1.5"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              About The Project
-            </button>
-            <button
-              id="nav-link-specs"
-              onClick={() => handleNavClick('/', 'system-specs')}
-              className="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1.5"
-            >
-              <Terminal className="w-3.5 h-3.5 text-blue-400" />
-              Specs
+              Creator
             </button>
             <div className="h-4 w-px bg-white/15 mx-1" />
             <button
               id="nav-link-privacy"
               onClick={() => handleNavClick('/privacy-policy')}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+              className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1 ${
                 currentRoute === '/privacy-policy'
-                  ? 'text-cyan-400 bg-cyan-950/50 border border-cyan-500/30'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'text-cyan-300 bg-cyan-950/80 border border-cyan-500/50 shadow-sm shadow-cyan-950'
+                  : 'text-slate-300 hover:text-cyan-300 hover:bg-white/5'
               }`}
             >
-              Privacy
+              <Shield className="w-3 h-3 text-cyan-400" />
+              Privacy Policy
             </button>
             <button
               id="nav-link-terms"
               onClick={() => handleNavClick('/terms-of-service')}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+              className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1 ${
                 currentRoute === '/terms-of-service'
-                  ? 'text-cyan-400 bg-cyan-950/50 border border-cyan-500/30'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'text-cyan-300 bg-cyan-950/80 border border-cyan-500/50 shadow-sm shadow-cyan-950'
+                  : 'text-slate-300 hover:text-cyan-300 hover:bg-white/5'
               }`}
             >
-              Terms
+              <Shield className="w-3 h-3 text-fuchsia-400" />
+              Terms of Service
             </button>
           </nav>
 
@@ -216,6 +218,16 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/5 flex items-center justify-between"
             >
               <span>Overview</span>
+            </button>
+            <button
+              onClick={() => handleNavClick('/', 'about')}
+              className="w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/5 flex items-center justify-between"
+            >
+              <span className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-cyan-400" />
+                About Vertex OS & Cloud Integration
+              </span>
+              <span className="text-[10px] bg-cyan-950 text-cyan-300 px-1.5 py-0.5 rounded border border-cyan-800">Purpose</span>
             </button>
             <button
               onClick={() => handleNavClick('/', 'software-suite')}
